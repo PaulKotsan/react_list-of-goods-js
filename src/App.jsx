@@ -55,8 +55,8 @@ export const App = () => {
           type="button"
           // className="button is-info is-light"
           className={classNames('button', 'is-warning', {
-            'is-light': sortType !== SORT_ALPHABETICALY,
-            'is-warning': sortType === SORT_ALPHABETICALY,
+            'is-light': sortType === SORT_ALPHABETICALY,
+            'is-warning': sortType !== SORT_ALPHABETICALY,
           })}
           onClick={() => setSortType(SORT_ALPHABETICALY)}
         >
@@ -67,8 +67,8 @@ export const App = () => {
           type="button"
           // className="button is-success is-light"
           className={classNames('button', {
-            'is-light': sortType !== SORT_BY_LENGTH,
-            'is-warning': sortType === SORT_BY_LENGTH,
+            'is-light': sortType === SORT_BY_LENGTH,
+            'is-warning': sortType !== SORT_BY_LENGTH,
           })}
           onClick={() => setSortType(SORT_BY_LENGTH)}
         >
